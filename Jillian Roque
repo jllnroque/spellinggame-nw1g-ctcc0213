@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Main {
+    private static int score = 0;
+    private static int attempts = 0;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to SpellIt. Enjoy the game!");
+
+        String[] words = {"pneumonia", "cornelia", "apocalypse", "synthesis", "onomatopoeia", "labyrinth", "trypophobia"};
+
+        boolean continueLoop = true;
+
+        while (continueLoop) {
+            for (String word: words) {
+                System.out.println("Spell the word: " + word);
+                String userGuess = scanner.nextLine(); 
+                attempts++;
+
+                if (checkSpelling(word, userGuess) {
+                    System.out.println("Correct!");
+                    score++;
+                } else { 
+                    System.out.println("Incorrect. The correct spelling is " + word);
+                }
+            }
+            System.out.println("Do you want to play again? (yes/no)";
+            String userInput = scaner.nextLine().toLowerCase();
+
+            if (userInput.equals("no)) {
+                continueLoop = false;
+            } else if (userInput.equals("yes)) {
+                continueLoop = true;
+            } else {
+                System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+                System.out.println("Do you want to play again? (yes/no)");
+                String secondInput = scanner.nextLine().toLowerCase();
+
+                if (secondInput.equals("no") {
+                    continueLoop = false;
+                } else if (secondInput.equals("yes")) {
+                    continueLoop = true;
+                } else {
+                    System.out.println("Invalid input. Exiting the program.");
+                    continueLoop = false;
+                }
+            }
+        }
+
+        System.out.println("Your score: " + score);
+        System.out.println("Total attempts: " + attempts);
+        System.out.println("Thank you for playing. Goodbye!);
+    }
+
+    private static String getRandomWord(String[] words) {
+        int randomIndex = (int) (Math.random() * words.length);
+        return words[randomIndex];
+    }
+
+    private static boolean checkSpelling(String correctWord, String userGuess) {
+        return correctWord.equalsIgnoreCase(userGuess);
+    }
+}
+
+
+
+
