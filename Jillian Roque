@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to SpellIt. Enjoy the game!");
 
-        String[] words = {"pneumonia", "cornelia", "apocalypse", "synthesis", "onomatopoeia", "labyrinth", "trypophobia"};
+        String[] words = {"pneumonia", "cornelia", "apocalypse", "entrepreneur", "onomatopoeia", "labyrinth", "trypophobia"};
 
         boolean continueLoop = true;
 
