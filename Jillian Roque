@@ -18,7 +18,7 @@ public class Main {
                 String userGuess = scanner.nextLine(); 
                 attempts++;
 
-                if (checkSpelling(word, userGuess) {
+                if (checkSpelling(word, userGuess)) {
                     System.out.println("Correct!");
                     score++;
                 } else { 
