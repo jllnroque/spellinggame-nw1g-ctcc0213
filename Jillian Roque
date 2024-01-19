@@ -26,7 +26,7 @@ public class Main {
                 }
             }
             System.out.println("Do you want to play again? (yes/no)");
-            String userInput = scaner.nextLine().toLowerCase();
+            String userInput = scanner.nextLine().toLowerCase();
 
             if (userInput.equals("no")) {
                 continueLoop = false;
